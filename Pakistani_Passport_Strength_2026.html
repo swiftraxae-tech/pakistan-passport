@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakistan Passport — Visa Requirements</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#050a14;
+  --green:#00e676;--blue:#4d8aff;--gold:#ffc400;--red:#ff4466;
+  --white:#e8f0fe;--muted:#8a9bb5;
+}
+html,body{background:var(--bg);color:var(--white);font-family:'Rajdhani',sans-serif;overflow-x:hidden;-webkit-text-size-adjust:100%;}
+
+/* Stars */
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    radial-gradient(1px 1px at 10% 12%,rgba(255,255,255,.8) 0%,transparent 100%),
+    radial-gradient(1px 1px at 85%  8%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 45% 65%,rgba(255,255,255,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at  5% 80%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 55%,rgba(255,255,255,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 30% 10%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 90%,rgba(255,255,255,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 55% 33%,rgba(255,255,255,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 78% 44%,rgba(255,255,255,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 20% 58%,rgba(255,255,255,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 40% 88%,rgba(255,255,255,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,rgba(255,255,255,.4) 0%,transparent 100%);}
+
+/* HEADER */
+header{position:relative;z-index:1;text-align:center;padding:clamp(36px,8vw,64px) 20px 8px;}
+.eyebrow{font-weight:400;font-size:clamp(.6rem,2vw,.78rem);letter-spacing:.35em;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
+h1{font-family:'Cinzel',serif;font-size:clamp(1.7rem,7.5vw,3.4rem);font-weight:900;letter-spacing:.04em;line-height:1.15;
+  background:linear-gradient(135deg,#fff 0%,#b8d0ff 45%,#4d8aff 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.subtitle{margin-top:10px;font-size:clamp(.75rem,2.5vw,1rem);color:var(--muted);letter-spacing:.1em;}
+
+/* LEGEND */
+.legend{position:relative;z-index:1;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;padding:22px 16px 0;}
+.li{display:flex;align-items:center;gap:7px;font-size:clamp(.65rem,2vw,.8rem);letter-spacing:.1em;font-weight:600;text-transform:uppercase;color:var(--muted);}
+.ld{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+
+/* SECTION */
+.section{position:relative;z-index:1;padding:clamp(36px,7vw,60px) 0 0;}
+.sh{text-align:center;padding:0 16px 0;}
+.st{font-family:'Cinzel',serif;font-size:clamp(.9rem,4vw,1.7rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:inline-block;position:relative;}
+.st::after{content:'';position:absolute;bottom:-7px;left:0;right:0;height:2px;background:currentColor;opacity:.35;border-radius:2px;}
+.sc{display:inline-block;margin-left:9px;font-size:clamp(.6rem,1.8vw,.75rem);font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.18em;opacity:.55;vertical-align:middle;}
+.s-green .st{color:var(--green);}
+.s-blue  .st{color:var(--blue);}
+.s-gold  .st{color:var(--gold);}
+.s-red   .st{color:var(--red);}
+
+/* ══════════════════════════════════════════════
+   ORBITAL STAGE
+   Uses a square aspect-ratio box so it always
+   has real height on every device.
+   vmin = smaller of vw/vh → keeps it on screen.
+══════════════════════════════════════════════ */
+.stage-wrap{
+  position:relative;z-index:1;
+  display:flex;justify-content:center;align-items:center;
+  padding: 8px 0 24px;
+}
+.stage{
+  position:relative;
+  /* size set per section via inline style */
+  flex-shrink:0;
+}
+
+/* Pakistan centre */
+.pak{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  z-index:20;
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  pointer-events:none;
+}
+.pak-flag{
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1.5px solid rgba(255,255,255,.15);
+  /* size + bg set inline */
+}
+.pak-lbl{
+  font-family:'Cinzel',serif;
+  font-size:clamp(.42rem,1.5vw,.62rem);
+  letter-spacing:.14em;color:var(--muted);text-transform:uppercase;
+}
+
+/* Orbit ring (dashed circle) */
+.ring{
+  position:absolute;top:50%;left:50%;
+  border-radius:50%;
+  border:1px dashed rgba(255,255,255,.08);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+
+/* Rotating track — one per ring */
+@keyframes cw  {from{transform:translate(-50%,-50%) rotate(0deg)  }to{transform:translate(-50%,-50%) rotate(360deg) }}
+@keyframes ccw {from{transform:rotate(0deg) }to{transform:rotate(-360deg)}}
+.track{
+  position:absolute;top:50%;left:50%;
+  border-radius:50%;
+  animation:cw linear infinite;
+}
+
+/* A node sits on the track's circumference */
+.node{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  display:flex;flex-direction:column;align-items:center;
+  cursor:default;-webkit-tap-highlight-color:transparent;
+}
+.node-inner{
+  animation:ccw linear infinite; /* same duration as track → stays upright */
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+}
+.bubble{
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.07);
+  border:1.5px solid;
+  transition:transform .2s;
+}
+.node:active .bubble,.node:hover .bubble{transform:scale(1.2);}
+.nm{
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  text-transform:uppercase;color:rgba(232,240,254,.9);
+  text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  line-height:1.1;
+}
+.bd{
+  font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.08em;
+  padding:1px 5px;border-radius:20px;opacity:.9;
+}
+
+/* DIVIDER */
+.div{width:90px;height:1px;background:linear-gradient(to right,transparent,rgba(255,255,255,.12),transparent);margin:0 auto;position:relative;z-index:1;}
+
+/* FOOTER */
+footer{position:relative;z-index:1;text-align:center;padding:clamp(24px,5vw,44px) 16px clamp(36px,7vw,64px);
+  font-size:clamp(.58rem,1.8vw,.72rem);color:var(--muted);letter-spacing:.14em;text-transform:uppercase;opacity:.5;}
+
+/* TOAST */
+.toast{position:fixed;bottom:clamp(16px,4vw,28px);left:50%;
+  transform:translateX(-50%) translateY(14px);
+  background:rgba(6,12,26,.97);border:1px solid rgba(255,255,255,.14);
+  border-radius:24px;padding:10px 22px;
+  font-size:clamp(.75rem,2.5vw,.9rem);font-weight:600;letter-spacing:.06em;color:var(--white);
+  z-index:9999;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;
+  white-space:nowrap;max-width:88vw;text-align:center;
+  backdrop-filter:blur(12px);}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Passport Index 2026</div>
+  <h1>Pakistan Passport<br>Visa Access</h1>
+  <p class="subtitle">Designed &amp; Developed by USMAN</p>
+</header>
+
+<div class="legend">
+  <div class="li"><div class="ld" style="background:var(--green)"></div>Visa-Free</div>
+  <div class="li"><div class="ld" style="background:var(--blue)"></div>eVisa / Online</div>
+  <div class="li"><div class="ld" style="background:var(--gold)"></div>Visa on Arrival</div>
+  <div class="li"><div class="ld" style="background:var(--red)"></div>ETA / Special</div>
+</div>
+
+<div class="section s-green">
+  <div class="sh"><span class="st">Visa-Free Countries<span class="sc">9 Countries</span></span></div>
+  <div class="stage-wrap"><div class="stage" id="sg"></div></div>
+</div>
+<div class="div"></div>
+
+<div class="section s-blue">
+  <div class="sh"><span class="st">eVisa (Online Apply)<span class="sc">21 Countries</span></span></div>
+  <div class="stage-wrap"><div class="stage" id="se"></div></div>
+</div>
+<div class="div"></div>
+
+<div class="section s-gold">
+  <div class="sh"><span class="st">Visa on Arrival<span class="sc">8 Countries</span></span></div>
+  <div class="stage-wrap"><div class="stage" id="sv"></div></div>
+</div>
+<div class="div"></div>
+
+<div class="section s-red">
+  <div class="sh"><span class="st">ETA / Special<span class="sc">4 Countries</span></span></div>
+  <div class="stage-wrap"><div class="stage" id="sr"></div></div>
+</div>
+
+<footer>Data sourced from Passport Index &nbsp;·&nbsp; Pakistan Passport &nbsp;·&nbsp; 2025</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const D={
+  visafree:{el:'sg',color:'#00e676',pakBg:'linear-gradient(135deg,#0d2a14,#061008)',speed:44,countries:[
+    {n:'Barbados',f:'🇧🇧',d:'90d'},{n:'Dominica',f:'🇩🇲',d:'180d'},
+    {n:'Gambia',f:'🇬🇲',d:'90d'},{n:'Haiti',f:'🇭🇹',d:'90d'},
+    {n:'Micronesia',f:'🇫🇲',d:'30d'},{n:'Rwanda',f:'🇷🇼',d:'30d'},
+    {n:'St. Vincent',f:'🇻🇨',d:'90d'},{n:'Trinidad & Tobago',f:'🇹🇹',d:''},
+    {n:'Vanuatu',f:'🇻🇺',d:'120d'}
+  ]},
+  evisa:{el:'se',color:'#4d8aff',pakBg:'linear-gradient(135deg,#07143a,#030a1e)',speed:60,countries:[
+    {n:'Azerbaijan',f:'🇦🇿',d:'30d'},{n:'Bolivia',f:'🇧🇴',d:''},
+    {n:'Burundi',f:'🇧🇮',d:'30d'},{n:'Cambodia',f:'🇰🇭',d:'30d'},
+    {n:'Congo DR',f:'🇨🇩',d:'7d'},{n:'Djibouti',f:'🇩🇯',d:'90d'},
+    {n:'Eq. Guinea',f:'🇬🇶',d:''},{n:'Ethiopia',f:'🇪🇹',d:'90d'},
+    {n:'Gabon',f:'🇬🇦',d:'90d'},{n:'Guinea',f:'🇬🇳',d:'90d'},
+    {n:'Madagascar',f:'🇲🇬',d:'90d'},{n:'Malaysia',f:'🇲🇾',d:'30d'},
+    {n:'Mauritania',f:'🇲🇷',d:'90d'},{n:'Nepal',f:'🇳🇵',d:'150d'},
+    {n:'Nigeria',f:'🇳🇬',d:'90d'},{n:'Sierra Leone',f:'🇸🇱',d:'30d'},
+    {n:'South Sudan',f:'🇸🇸',d:'90d'},{n:'Suriname',f:'🇸🇷',d:'90d'},
+    {n:'Togo',f:'🇹🇬',d:'15d'},{n:'Uganda',f:'🇺🇬',d:''},
+    {n:'Viet Nam',f:'🇻🇳',d:'90d'}
+  ]},
+  voa:{el:'sv',color:'#ffc400',pakBg:'linear-gradient(135deg,#1e1400,#0c0900)',speed:50,countries:[
+    {n:'Comoros',f:'🇰🇲',d:'45d'},{n:'Guinea-Bissau',f:'🇬🇼',d:'90d'},
+    {n:'Maldives',f:'🇲🇻',d:'30d'},{n:'Palau',f:'🇵🇼',d:'30d'},
+    {n:'Samoa',f:'🇼🇸',d:'90d'},{n:'Senegal',f:'🇸🇳',d:'30d'},
+    {n:'Timor-Leste',f:'🇹🇱',d:'30d'},{n:'Tuvalu',f:'🇹🇻',d:'30d'}
+  ]},
+  eta:{el:'sr',color:'#ff4466',pakBg:'linear-gradient(135deg,#200612,#0e0008)',speed:38,countries:[
+    {n:"Côte d'Ivoire",f:'🇨🇮',d:'90d'},{n:'Kenya',f:'🇰🇪',d:'90d'},
+    {n:'Seychelles',f:'🇸🇨',d:'90d'},{n:'Sri Lanka',f:'🇱🇰',d:'30d'}
+  ]}
+};
+
+/* ── responsive sizes ──────────────────────────────── */
+function sz(){
+  const vw=window.innerWidth;
+  if(vw<360) return{flag:28,ctr:54,nm:8, bd:7, pad:44,r1:130,r2:222,r3:314};
+  if(vw<430) return{flag:32,ctr:60,nm:9, bd:8, pad:50,r1:148,r2:250,r3:352};
+  if(vw<540) return{flag:36,ctr:66,nm:10,bd:8, pad:56,r1:160,r2:270,r3:380};
+  if(vw<700) return{flag:40,ctr:74,nm:11,bd:9, pad:62,r1:172,r2:290,r3:410};
+  if(vw<900) return{flag:44,ctr:82,nm:12,bd:10,pad:68,r1:185,r2:310,r3:438};
+             return{flag:50,ctr:92,nm:14,bd:11,pad:76,r1:200,r2:334,r3:468};
+}
+
+/* ── ring splitter ─────────────────────────────────── */
+function rings(countries,s){
+  const n=countries.length;
+  if(n<=9)  return [{items:countries,           r:s.r1}];
+  if(n<=16) return [{items:countries.slice(0,Math.ceil(n/2)),r:s.r1},
+                    {items:countries.slice(Math.ceil(n/2)),  r:s.r2}];
+  const t=Math.ceil(n/3);
+  return [{items:countries.slice(0,t),   r:s.r1},
+          {items:countries.slice(t,t*2), r:s.r2},
+          {items:countries.slice(t*2),   r:s.r3}];
+}
+
+/* ── build ─────────────────────────────────────────── */
+function build(){
+  const s=sz();
+  Object.values(D).forEach(set=>{
+    const stage=document.getElementById(set.el);
+    stage.innerHTML='';
+
+    const rs=rings(set.countries,s);
+    const outerR=rs[rs.length-1].r;
+    const SIZE=(outerR+s.pad)*2;
+    stage.style.width=SIZE+'px';
+    stage.style.height=SIZE+'px';
+
+    /* dashed orbit circles */
+    rs.forEach(r=>{
+      const d=document.createElement('div');
+      d.className='ring';
+      const sz2=r.r*2;
+      d.style.cssText=`width:${sz2}px;height:${sz2}px;`;
+      stage.appendChild(d);
+    });
+
+    /* Pakistan centre */
+    const pak=document.createElement('div');
+    pak.className='pak';
+    const pf=document.createElement('div');
+    pf.className='pak-flag';
+    pf.style.cssText=`width:${s.ctr}px;height:${s.ctr}px;font-size:${s.ctr*.56}px;background:${set.pakBg};
+      box-shadow:0 0 0 3px ${set.color}33,0 0 28px ${set.color}22;`;
+    pf.textContent='🇵🇰';
+    const pl=document.createElement('div');
+    pl.className='pak-lbl';pl.textContent='PAKISTAN';
+    pak.appendChild(pf);pak.appendChild(pl);
+    stage.appendChild(pak);
+
+    /* tracks + nodes */
+    rs.forEach((ring,ri)=>{
+      const dur=set.speed+ri*14;
+      const track=document.createElement('div');
+      track.className='track';
+      track.style.cssText=`width:${ring.r*2}px;height:${ring.r*2}px;animation-duration:${dur}s;`;
+      stage.appendChild(track);
+
+      ring.items.forEach((c,i)=>{
+        const angle=(360/ring.items.length)*i-90;
+        const rad=angle*Math.PI/180;
+        const nx=ring.r+ring.r*Math.cos(rad);
+        const ny=ring.r+ring.r*Math.sin(rad);
+
+        const node=document.createElement('div');
+        node.className='node';
+        node.style.cssText=`left:${nx}px;top:${ny}px;`;
+
+        const inner=document.createElement('div');
+        inner.className='node-inner';
+        inner.style.animationDuration=dur+'s';
+
+        /* flag bubble */
+        const bub=document.createElement('div');
+        bub.className='bubble';
+        bub.style.cssText=`width:${s.flag}px;height:${s.flag}px;font-size:${s.flag*.6}px;
+          border-color:${set.color}55;box-shadow:0 0 8px ${set.color}33;`;
+        bub.textContent=c.f;
+        inner.appendChild(bub);
+
+        /* name */
+        const nm=document.createElement('div');
+        nm.className='nm';
+        nm.style.cssText=`font-size:${s.nm}px;max-width:${s.flag+22}px;`;
+        nm.textContent=c.n;
+        inner.appendChild(nm);
+
+        /* days badge */
+        if(c.d){
+          const bd=document.createElement('div');
+          bd.className='bd';
+          bd.style.cssText=`font-size:${s.bd}px;background:${set.color}22;color:${set.color};`;
+          bd.textContent=c.d;
+          inner.appendChild(bd);
+        }
+
+        node.appendChild(inner);
+        track.appendChild(node);
+
+        /* interactions */
+        const msg=`${c.f} ${c.n}${c.d?' · '+c.d:''}`;
+        node.addEventListener('touchstart',e=>{e.stopPropagation();toast(msg);},{passive:true});
+        node.addEventListener('mouseenter',()=>toast(msg));
+        node.addEventListener('mouseleave',()=>hideToast());
+      });
+    });
+  });
+}
+
+/* ── toast ─────────────────────────────────────────── */
+const T=document.getElementById('toast');
+let tt;
+function toast(m){clearTimeout(tt);T.textContent=m;T.classList.add('on');tt=setTimeout(hideToast,2400);}
+function hideToast(){T.classList.remove('on');}
+
+/* ── init ──────────────────────────────────────────── */
+// Use requestAnimationFrame after load so layout is stable on iOS Safari
+function init(){requestAnimationFrame(()=>requestAnimationFrame(build));}
+
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',init);
+}else{
+  init();
+}
+window.addEventListener('load',build); // second pass after fonts/images
+window.addEventListener('resize',()=>{clearTimeout(window._rt);window._rt=setTimeout(build,200);});
+window.addEventListener('orientationchange',()=>setTimeout(build,350));
+</script>
+</body>
+</html>
